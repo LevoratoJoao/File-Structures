@@ -67,3 +67,4 @@ Destiny|Bungie|FPS/RPG|Multiplataforma|2014|Teen|59.99|Ambos|55.0
 Destiny 2|Bungie|FPS/RPG|Multiplataforma|2017|Teen|F2P|Ambos|68.0
 Minecraft|Microsoft/Mojang|Sandbox|Multiplataforma|2011|Everyone 10+|129.00|Ambos|4.0
 The Hidden and Unknown|Unknown|Mistery|PC|2022|Everyone|5390.99|Digital|0.505
+Borderlands 2|Gearbox Software|RPG|Multiplataforma|2020|Mature 17+|119.90|Ambos|94.38
