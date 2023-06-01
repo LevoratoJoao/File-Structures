@@ -10,7 +10,6 @@ import os
 #------------------------------------------------------
 
 class IndicePrimario:
-
 	# atributos
 	# 1. arquivo de dados (escrita/leitura), [r+]
 	__arquivoDados = None
@@ -21,8 +20,8 @@ class IndicePrimario:
 
 	# A: construtor
 	def __init__(self):
-		 # path = '/home/joaolevorato/programacao/File-Structures/PrimaryIndex/arqDados.txt'
-		self.__arquivoDados = open("/media/a2419890/home/File-Structures/PrimaryIndex/arqDados.txt", "r+") # abrir o arquivo de dados (arquivo existente)
+		 # path = '/media/a2419890/home/File-Structures/PrimaryIndex/arqDados.txt'
+		self.__arquivoDados = open("/home/joaolevorato/programacao/File-Structures/PrimaryIndex/arqDados.txt", "r+") # abrir o arquivo de dados (arquivo existente)
 		if(os.path.isfile("PrimaryIndex/arqIdxPrimario.txt")): # arquivo de idx primario
 			self.__arquivoIdxPrimario = open("PrimaryIndex/arqIdxPrimario.txt", "r+")
 			for line in self.__arquivoIdxPrimario.readlines():
@@ -39,8 +38,10 @@ class IndicePrimario:
 				RRN+=1
 			# (chave, RRN) -> tupla[0]
 			self.__tabelaIndices.sort(key=lambda a: a[0]) # ordenar a tabela
-			for i in range(0, len(self.__tabelaIndices)):
-				print(self.__tabelaIndices[i])
+
+	def imprimeTabelaIndices(self):
+		for element in self.__tabelaIndices:
+			print(element)
 
 	def criaChaveCanonica(self, registro):
 		x = registro.split('|')
@@ -61,31 +62,30 @@ class IndicePrimario:
 
 	# C: Insercao (registro)
 	def insereRegistro(self, registro):
-		chaveRegistro = self.criaChaveCanonica(registro)
-		achou = self.pesquisaRegistro(chaveRegistro)
+		chaveRegistro = self.criaChaveCanonica(registro) # calcular chave primaria do registro
+		achou = self.pesquisaRegistro(chaveRegistro) # procurar na tabela (RAM) se a chave ja existe
+		self.__arquivoDados.seek(0)
 		primeiraLinha = [int(x) for x in re.findall(r'-?\d+\.*', self.__arquivoDados.readlines()[0])] # Regex para extrair apenas os numeros da primeira linha -> REG.N e TOP (-?\d = encontra tanto numeros negativos quanto positivos, \.* procura mais de um match)
 		if achou == None:
-			if primeiraLinha[1] == -1:
+			if primeiraLinha[1] == -1: # verificar se tem espaco vago no arquivo (header, TOP)
+				# RNN <- se nao tiver: append
 				self.__arquivoDados.write(f"\n{registro}")
 				self.__tabelaIndices.append((chaveRegistro, primeiraLinha[0]))
 				primeiraLinha[0] = primeiraLinha[0] + 1
 				self.__tabelaIndices.sort(key=lambda a: a[0]) # ordenar a tabela
 			else:
-				index = [int(x) for x in re.findall(r'-?\d+\.*', game[primeiraLinha[1]].nome[0:3])] # Regex para extrair o numero a ser novo TOP (tem formas mais simples mas queria brincar com regex)
-				game[primeiraLinha[1]] = exceptionHandling(op[1:])
+				# RNN <- se tiver espaco vago: reuso
+				print(self.__tabelaIndices[primeiraLinha[1]])
+				print(self.__tabelaIndices[primeiraLinha[1]][0:3])
+				index = [int(x) for x in re.findall(r'-?\d+\.*', self.__tabelaIndices[primeiraLinha[1]][0:3])] # Regex para extrair o numero a ser novo TOP (tem formas mais simples mas queria brincar com regex)
+				self.__tabelaIndices[primeiraLinha[1]] = registro
+				self.__arquivoDados.write(f"\n{registro}")
 				# Atualizacao da primeiraLinha:
 				primeiraLinha[0] = primeiraLinha[0] + 1
 				primeiraLinha[1] = index[0]
+				self.__tabelaIndices.sort(key=lambda a: a[0])
 		else:
-			print(f"Game {op[1]} already exist in the data base\n")
-		#	calcular chave primaria do registro
-		#   procurar na tabela (RAM) se a chave ja existe
-		#   se a chave ja existir: nao faz nada!
-		#   senao:
-		#       verificar se tem espaco vago no arquivo (header, TOP)
-		#       RNN <- se tiver espaco vago: reuso
-		#       RNN <- se nao tiver: append
-		#       add na tabela (chave, RNN)
+			print(f"{registro} already exist in the data base\n")
 		#       reordena a tabela
 
 	# D: Pesquisa (chave)

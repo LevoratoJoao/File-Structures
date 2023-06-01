@@ -1,4 +1,4 @@
-REG.N=68 TOP=-1
+REG.N=68 TOP=14
 The Witcher 3 - Wild Hunt|CD Projekt|Action RPG|Multiplataforma|2015|Mature 17+|79.90|Ambos|32.0
 Hollow Knight|Team Cherry|Metroidvania|Multiplataforma|2017|Everyone 10+|24.97|Digital|5.3
 The Legend of Zelda: Breath of the Wild|Nintendo|Action-adventure|Switch|2017|Everyone 10+|199.90|Ambos|13.4
@@ -13,7 +13,7 @@ Final Fantasy XV|Square Enix|Action RPG|Multiplataforma|2016|Teen|125.00|Ambos|1
 Final Fantasy VII Remake|Square Enix|Action RPG|Multiplataforma|2020|Teen|349.00|Ambos|100.0
 Rocket League|Psyonix|Sports|Multiplataforma|2015|Everyone|Free|Digital|20.0
 Fallout 4|Bethesda Game Studios|RPG|Multiplataforma|2015|Mature 17+|59.99|Ambos|36.23
-Borderlands 3|Gearbox Software|RPG|Multiplataforma|2020|Mature 17+|119.90|Ambos|94.38
+*-1|erlands 3|Gearbox Software|RPG|Multiplataforma|2020|Mature 17+|119.90|Ambos|94.38
 Arma 3|Bohemia Interactive|Simulacao|PC|2013|Mature 17+|29.99|Digital|40.57
 PAYDAY 2|OVERKILL - a Starbreeze Studio|RPG|Multiplataforma|2013|Mature 17+|11.99|Ambos|81.49
 Squad|Offworld Industries|Indie|PC|2020|Mature 17+|70.49|Digital|74.15
@@ -48,11 +48,11 @@ Guitar Hero III|Activision|Musical|Multiplataforma|2007|Teen||Fisica|5.1
 Guitar Hero Aerosmith|Activision|Musical|Multiplataforma|2008|Teen||Fisica|4.51
 Guitar Hero Encore: Rock the 80s|Activision|Musical|Multiplataforma|2007|Teen||Fisica|1.31
 Harvest Moon: Back to Nature|Marvelous Entertainment|Simulacao|Multiplataforma|1999|Everyone||Fisica|0.024
-God of War 2|Santa Monica Studios|Hack and Slash|Playstation|2007|Mature 17+||Fisica|5.77 
-Dragon Ball: Budokai Tenkaichi 3|Spike|Acao|Multiplataforma|2007|12+||Fisica|1.21 
-Naruto Shippuden: Ultimate Ninja 5|CyberConnect2|Acao|Playstation 2|2007|12+||Fisica|1.49 
+God of War 2|Santa Monica Studios|Hack and Slash|Playstation|2007|Mature 17+||Fisica|5.77
+Dragon Ball: Budokai Tenkaichi 3|Spike|Acao|Multiplataforma|2007|12+||Fisica|1.21
+Naruto Shippuden: Ultimate Ninja 5|CyberConnect2|Acao|Playstation 2|2007|12+||Fisica|1.49
 The Sims 2|Electronic Arts|Simulacao Social|Multiplataforma|2004|Teen||Ambos|3.5
-Burnout 3: Takedown|Criterion Games|Corrida|Multiplataforma|2004|3+||Fisica|1.47 
+Burnout 3: Takedown|Criterion Games|Corrida|Multiplataforma|2004|3+||Fisica|1.47
 Shadow of the Colossus: Remake|Team Ico|Acao|Playstation|2018|Teen|99.50|Ambos|14
 Valorant|Riot Games|FPS|PC|2020|14+|Free|Digital|10
 Call of Duty: Black Ops 2|Treyarch|FPS|Multiplataforma|2012|18+|89.99|Ambos|16
@@ -67,4 +67,3 @@ Destiny|Bungie|FPS/RPG|Multiplataforma|2014|Teen|59.99|Ambos|55.0
 Destiny 2|Bungie|FPS/RPG|Multiplataforma|2017|Teen|F2P|Ambos|68.0
 Minecraft|Microsoft/Mojang|Sandbox|Multiplataforma|2011|Everyone 10+|129.00|Ambos|4.0
 The Hidden and Unknown|Unknown|Mistery|PC|2022|Everyone|5390.99|Digital|0.505
-Borderlands 2|Gearbox Software|RPG|Multiplataforma|2020|Mature 17+|119.90|Ambos|94.38
