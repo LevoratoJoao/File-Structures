@@ -75,10 +75,9 @@ class IndicePrimario:
 				self.__tabelaIndices.sort(key=lambda a: a[0]) # ordenar a tabela
 			else:
 				# RNN <- se tiver espaco vago: reuso
-				print(self.__tabelaIndices[primeiraLinha[1]])
-				print(self.__tabelaIndices[primeiraLinha[1]][0:3])
-				index = [int(x) for x in re.findall(r'-?\d+\.*', self.__tabelaIndices[primeiraLinha[1]][0:3])] # Regex para extrair o numero a ser novo TOP (tem formas mais simples mas queria brincar com regex)
-				self.__tabelaIndices[primeiraLinha[1]] = registro
+				# index = [int(x) for x in re.findall(r'-?\d+\.*', self.__tabelaIndices) if x == 14] # Regex para extrair o numero a ser novo TOP (tem formas mais simples mas queria brincar com regex)
+				index = [x for x in range(0, len(self.__tabelaIndices)) if int(self.__tabelaIndices[x][1]) == 14]
+				self.__tabelaIndices[index] = registro
 				self.__arquivoDados.write(f"\n{registro}")
 				# Atualizacao da primeiraLinha:
 				primeiraLinha[0] = primeiraLinha[0] + 1
@@ -88,6 +87,14 @@ class IndicePrimario:
 			print(f"{registro} already exist in the data base\n")
 		#       reordena a tabela
 
+	def removerRegistro(self, chave):
+		achou = self.pesquisaRegistro(chave)
+		if achou == None:
+			return
+		else:
+			achou = achou.replace(achou[:len(str(firstLine[1])) + 2], f"*{firstLine[1]}|") # sobrescreve o registro a ser "removido" (replace com um parametro ja sendo o nome com a quantia correta de bytes a ser sobrescrito)
+        firstLine[1] = find[1]
+        firstLine[0] = firstLine[0] - 1
 	# D: Pesquisa (chave)
 	def pesquisaRegistro(self, chave):
 		self.__arquivoDados.seek(0)
