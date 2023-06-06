@@ -78,15 +78,38 @@ class IndiceSecundario:
 	def removerRegistro(self, chave):
 		pass
 
+	def binarySearch(self, chavePrimaria):
+		menor = 0
+		meio = 0
+		maior = len(self.tabelaIndicePrimario) - 1
+		registros = []
+		while menor <= maior:
+			meio = (maior + menor) // 2
+			if self.tabelaIndicePrimario[meio][0] < chavePrimaria:
+				menor = meio + 1
+			elif self.tabelaIndicePrimario[meio][0] > chavePrimaria:
+				maior = meio - 1
+			else:
+				return self.tabelaIndicePrimario[meio][1]
+
 	def pesquisarRegistro(self, chaveSecundaria):
-		self.__arquivoDados.seek(0)
-		# 1- Nao achou
-		# vai procurar a chaveSecundaria na Tabela ind Secu
-		if chaveSecundaria in self.tabelaIndiceSecundario:
-			#registro = self.arquivoDados.readlines()[int(self.tabelaIndicePrimario[i][1]) + 1]
-			return
-		else:
-			pass
+		# procura todos os registro iguais na tabela indice secundario
+		registros = []
+		for i in self.tabelaIndiceSecundario:
+			if int(i[0]) == int(chaveSecundaria):
+				registros.append(i)
+		# procura na tabela de indice primario
+		achou = []
+		for i in registros:
+			achou.append(self.binarySearch(i[1]))
+
+		# pegou rrn e procura no arquivo
+		regArquivo = []
+		for i in achou:
+			self.arquivoDados.seek(0)
+			regArquivo.append(self.arquivoDados.readlines()[i + 1])
+
+
 		# Se nao achastes: retornar Falso
 		# Senao (existe)
 		#	2. Lista com tuplas (1 ou + tuplas)

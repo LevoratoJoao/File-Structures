@@ -1,4 +1,3 @@
 Duvidas:
-    1- pesquisa não deve ser com relação a chavePrimaria ? Ou busco pela chave secundaria, monto lista com os valores retornados (caso + de 1) e busco nela por uma chave primaria ?
-    2- na parte de inserir e remover, toda pesquisa que fiz dizia que se caso quisesse remover/inserir alguma informação em uma determinada linha do arquivo eu teria que ler e armazenar os dados na ram e alterar a linha na ram depois jogar no arquivo, não encontrei uma forma de sobrescrever apenas uma linha do arquivo
-    Outra maneira que vi foi lendo linha por linha salvando em um outro arquivo ate chegar a desejada, quando chegar altera a sua informação e salva no outro arquivo, depois de percorrer tudo só troca nome do outro arquivo pro original
+    1- Usar pesquisar para as funções de inserir e remover
+    2- Preciso fazer casos de teste para recuperar dados de uma tabela de indice ja existente ?
