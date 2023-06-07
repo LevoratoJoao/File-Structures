@@ -1,3 +1,5 @@
-Duvidas:
-    1- Usar pesquisar para as funções de inserir e remover
-    2- Preciso fazer casos de teste para recuperar dados de uma tabela de indice ja existente ?
+# File-Structures
+
+## Secondary Index
+
+To run this project just use make test, it will create a .txt file for every exercise

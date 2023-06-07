@@ -1,0 +1,18 @@
+REG.N=17 TOP=-1
+Ori and the Blind Forest|Moon Studios GmbH|Platform Adventure|Multiplataforma|2015|Everyone|59.00|Digital|11.00
+Halo Infinite|343 Industries|FPS|Multiplataforma|2021|14+|130.00|Ambos|48.42
+PAYDAY 2|OVERKILL - a Starbreeze Studio|RPG|Multiplataforma|2013|Mature 17+|11.99|Ambos|81.49
+Rocket League|Psyonix|Sports|Multiplataforma|2015|Everyone|Free|Digital|20.0
+Final Fantasy VII Remake|Square Enix|Action RPG|Multiplataforma|2020|Teen|349.00|Ambos|100.0
+Counter Strike Global Offensive|Valve|First-person Shooter|PC|2012|16+|F2P|Digital|29.51
+Arma 3|Bohemia Interactive|Simulacao|PC|2013|Mature 17+|29.99|Digital|40.57
+Bleach Brave Souls|KlabGames|Action RPG|Multiplataforma|2016|12+|00.00|Digital|5.0
+The Binding of Isaac: Rebirth|Nicalis|Roguelike|PC|2014|Mature 17+|27.99|Digital|0.449
+Blasphemous|Team17|Metroidvania|Multiplataforma|2019|Mature+18|57.99|Digital|0.85388
+Pokemon Emerald|Nintendo|RPG de turno|GBA|2004|Everyone|34.99|Ambos|0.016
+Fallout 4|Bethesda Game Studios|RPG|Multiplataforma|2015|Mature 17+|59.99|Ambos|36.23
+Final Fantasy X/X-2 Hd Remaster|Square Enix|RPG|Multiplataforma|2013|Teen|55.99|Ambos|37.0
+The Witcher 3 - Wild Hunt|CD Projekt|Action RPG|Multiplataforma|2015|Mature 17+|79.90|Ambos|32.0
+Borderlands 3|Gearbox Software|RPG|Multiplataforma|2020|Mature 17+|119.90|Ambos|94.38
+Celeste|Extremely OK Games|Adventure|Multiplataforma|2018|Everyone|36.99|Digital|1.2
+Sifu|Sloclap|Acao e Aventura|Multiplataforma|2022|17+|75.99|Digital|22
