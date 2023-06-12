@@ -45,6 +45,14 @@ class IndiceSecundario:
 		chavePrimaria = x[0] + x[4]
 		chavePrimaria = chavePrimaria.upper().replace(' ', '')
 		return chavePrimaria, x[4]
+	
+	def showIndicePrimario(self):
+		for x in self.tabelaIndicePrimario:
+			print(f"{x}")
+	
+	def showIndiceSecundario(self):
+		for x in self.tabelaIndiceSecundario:
+			print(f"{x}")
 
 	def __del__(self):
 		# arquivo de indices
@@ -109,7 +117,7 @@ class IndiceSecundario:
 		self.arquivoDados.seek(0)
 		# confere na tabela (chave == alguem?), busca binaria
 		achou = self.binarySearch(chave[0])
-		if achou is not None:
+		if achou != None:
 			return self.arquivoDados.readlines()[achou + 1], achou # retorna o registro e o RRN
 		else:
 			return None
